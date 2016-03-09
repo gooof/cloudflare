@@ -225,10 +225,8 @@ class Api
             //curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
             curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         } else if ($method === 'put') {
-            //curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
-            //curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-HTTP-Method-Override: PUT'));
             $headers[] = "Content-type: application/json";
         } else if ($method === 'delete') {
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
