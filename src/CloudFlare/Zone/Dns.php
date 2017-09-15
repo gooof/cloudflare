@@ -113,6 +113,19 @@ class Dns extends Api
         ];
 
         return $this->put('zones/'.$zone_identifier.'/dns_records/'.$identifier, $data);
+	/*
+        $data = array(
+            'type'      => $type,
+            'name'      => $name,
+            'content'   => $content,
+            'ttl'       => $ttl,
+            'proxied'   => $proxied
+        );
+
+		$data = $type; // GOOOF
+
+        return $this->put('zones/' . $zone_identifier . '/dns_records/' . $identifier, $data);
+	*/
     }
 
     /**
